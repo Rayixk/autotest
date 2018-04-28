@@ -2,14 +2,14 @@ import time
 import unittest
 from selenium.webdriver.common.by import By
 from settings import DATA_PATH, REPORT_PATH,URL
-from minitest import logger
-from minitest.utils.reader import ExcelReader
-from minitest.core.runner import HTMLTestRunner
+from operatetest import logger
+from operatetest.utils.reader import ExcelReader
+from operatetest.core.runner import HTMLTestRunner
 
 from aw import driver
 
 class TestBaiDu(unittest.TestCase):
-    URL = URL
+    URL = 'http://www.baidu.com'
     excel = DATA_PATH + '/baidu.xlsx'
 
     locator_kw = (By.ID, 'kw')

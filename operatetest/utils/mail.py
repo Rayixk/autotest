@@ -9,7 +9,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from socket import gaierror, error
-from minitest.utils.log import logger
+from operatetest.utils.log import logger
 
 
 class Email:

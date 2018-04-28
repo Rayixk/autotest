@@ -3,7 +3,7 @@
 
 """一些支持方法，比如加密"""
 import hashlib
-from minitest import logger
+from operatetest import logger
 
 
 class EncryptError(Exception):

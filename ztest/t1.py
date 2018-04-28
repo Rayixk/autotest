@@ -1,20 +1,12 @@
 # coding: utf-8
 # created by yang
 
-def f1(*args,**kwargs):
-    print(args)
-    print(kwargs)
-    def wrapper(func):
-        return func(*args,**kwargs)
-    return wrapper
-
 class My:
 
     def __init__(self):
         self.b = B()
 
 
-    @f1
     def __getattr__(self, item,*args,**kwargs):
         print(item)
         print(args)

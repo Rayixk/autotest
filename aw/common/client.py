@@ -7,7 +7,7 @@
 """
 
 import requests
-from minitest import logger
+from operatetest import logger
 
 METHODS = ['GET', 'POST', 'HEAD', 'TRACE', 'PUT', 'DELETE', 'OPTIONS', 'CONNECT']
 
