@@ -1,10 +1,13 @@
 """
 Some auxiliary functions
 """
+
 import os
 import json
+import datetime
 from ..conf import settings
 from .exception import ConfigNotExistError,ConfigParseError
+from ..utils import path_join,make_dirs
 
 
 def _config():
@@ -36,5 +39,22 @@ class Variable(dict):
             value = Variable(config=value)
         return value
 
-
 VAR = Variable()
+
+def handle_config():
+    if not os.path.isabs(VAR.driver_dir):
+        setattr(VAR,"driver_dir",path_join(settings.BASE_DIR,VAR.driver_dir))
+
+    if not os.path.isabs(VAR.report_dir):
+        now = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+        cur_dir = path_join(settings.BASE_DIR,VAR.report_dir,now)
+        make_dirs(cur_dir)
+        setattr(VAR,"report_dir",cur_dir)
+
+
+handle_config()
+
+
+
+
+
