@@ -3,8 +3,8 @@ from aw import *
 from operatetest import *
 
 class TestBaiDu(TestCase):
-    URL = 'http://www.baidu.com'
-    # excel = DATA_PATH + '/baidu.xlsx'
+    URL = 'http://www.web.com'
+    # excel = DATA_PATH + '/web.xlsx'
     #
     # locator_kw = (By.ID, 'kw')
     # locator_su = (By.ID, 'su')

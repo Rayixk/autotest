@@ -10,7 +10,7 @@ from ..auxiliary import VAR
 from ..utils import path_join
 
 class Logger(object):
-    def __init__(self,logger_name=''):
+    def __init__(self,logger_name='operatetest'):
         self.logger = logging.getLogger(logger_name)
         logging.root.setLevel(logging.NOTSET)
 

@@ -21,8 +21,8 @@ class HTTPClient(object):
     """
     http请求的client。初始化时传入url、method等，可以添加headers和cookies，但没有auth、proxy。
 
-    >>> HTTPClient('http://www.baidu.com').send()
-    <Response [200]>
+    >>> HTTPClient(web).send()
+webResponse [200]>
 
     """
     def __init__(self, url, method='GET', headers=None, cookies=None):

@@ -4,19 +4,7 @@ from .runner import HTMLTestRunner
 from ..auxiliary import VAR
 from .. import utils
 from ..utils import importer
-from ..utils.log import logger
 from ..conf import settings
-from .uiautomator import connect
-
-
-def initialize():
-    try:
-        ad = connect(VAR.device_ip)
-        logger.debug("device info:{}".format(ad.info))
-        setattr(VAR,"ad",ad)
-    except Exception as e:
-        raise Exception("连接手机失败,请检查手机IP是否配置正确!")
-
 
 
 def run():
@@ -33,8 +21,7 @@ def run():
     #
     # a.close()
 
-    # 1
-    initialize()
+    # 1、构造用例集
 
 
     # 2、执行顺序是安加载顺序：先执行test_sub，再执行test_add

@@ -10,4 +10,5 @@ from .auxiliary import VAR as config
 from .utils.log import logger
 from .core.testcase import TestCase
 
+
 logger.info("-----------------------  Operate Test Version {}  -----------------------".format(VERSION))

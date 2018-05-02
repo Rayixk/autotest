@@ -21,7 +21,7 @@ def send_keys(driver,*con,keys):
     :param driver: webdriver对象
     :param con: 元素搜索条件,如 "id","kw" 
     :param keys: 需要输入字符
-    :example:common.send_keys(driver,"id","kw",keys="baidu") 
+    :example:common.send_keys(driver,"id","kw",keys="web") 
     """
     driver.find_element(*con).send_keys(keys)
 
